@@ -90,7 +90,7 @@ func generateResponse(tokens []prose.Token) string {
 	// Limit response to 256 words
 	responseLength := 256
 	responseArr := make([]string, responseLength)
-	generateUntil := []string{".", ",", "?", "!"}
+	generateUntil := []string{".", "?", "!"}
 
 	// Choose random token from array
 	responseArr[0] = tokens[rand.Intn(len(tokens))].Text
